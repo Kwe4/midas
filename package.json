@@ -1,0 +1,28 @@
+{
+  "name": "madass-accounting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technext/elegant.git"
+  },
+  "author": "David Sokefun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/technext/elegant/issues"
+  },
+  "engines": {
+    "node": "16.6.0"
+  },
+  "homepage": "https://github.com/technext/elegant#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "mongoose": "^6.4.1"
+  }
+}

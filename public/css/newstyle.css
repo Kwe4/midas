@@ -1,0 +1,33 @@
+.blur-container-1, .blur-container-2,.blur-container-3,.blur-container-4 {
+   background-color: red;
+   position: fixed;
+   top:0;
+   left:0;
+   width:100vw;
+   height:100vh;
+   z-index:1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgba(0, 0, 0, 0.6);
+   display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.closa-div-1, .closa-div-2, .closa-div-3, .closa-div-4 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.closa-1,.closa-2,.closa-3,.closa-4 {
+    width: 10%;
+    cursor: pointer;
+}
+.closa-1:hover, .closa-2:hover, .closa-3:hover, .closa-4:hover {
+    font-size: xx-large;
+    color: blue;
+}

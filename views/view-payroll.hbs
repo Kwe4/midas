@@ -1,0 +1,57 @@
+    <h2 class="main-title"> PayRoll <span> &#8358;{{staffAddup}} </span>   </h2>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="users-table table-wrapper">
+              <table class="posts-table">
+                <thead>
+                  <tr class="users-table-info">
+                    <th>
+                      <label class="users-table__checkbox ms-20">
+                        <input type="checkbox" class="check-all"> Name
+                      </label>
+                    </th>
+                    <th> Role </th>
+                    <th> Salary &#8358;</th>
+                    <th>Bank</th>
+                    <th> Payment Status </th>
+                    <th> Action </th>
+                  </tr>
+                </thead>
+                <tbody>
+                {{#each allStaff}}
+                  <tr>
+                    <td>
+                      <label class="users-table__checkbox">
+                        <input type="checkbox" class="check">
+                        {{name}} 
+                      </label>
+                    </td>
+                    <td>
+                      {{role}}
+                    </td>
+                    <td>
+                      <form action="/liabilities/update/{{_id}}" method="post">
+                      <input 
+                      name="value"
+                      style="text-align:center;" type="text" value="{{salary}}" onchange="this.form.submit()">
+                      </form>
+                    </td>
+                    <td>
+                      {{bank}}
+                    </td>
+                    <td>
+                      Unpaid
+                    </td>
+                    <td>
+                      <span class="badge-pending">Delete
+                      </span>
+                      </td>
+                  </tr>
+                {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+         
+        </div>

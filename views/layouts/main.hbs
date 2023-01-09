@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Accounting Dashboard | Dashboard</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/svg/logo.svg" type="image/x-icon">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="stylesheet" href="/css/newstyle.css">
+</head>
+<body>
+
+  <div class="layer"></div>
+<!-- ! Body -->
+<a class="skip-link sr-only" href="#skip-target">Skip to content</a>
+<div class="page-flex">
+  <!-- ! Sidebar -->
+{{> sidebar}}
+
+  <div class="main-wrapper">
+    <!-- ! Main nav -->
+   {{> nav}}
+    <!-- ! Main -->
+    <main class="main users chart-page" id="skip-target">
+      <div class="container">
+      {{!-- Blur Container 1 (Create Transaction) --}}
+        <div class="blur-container-1">
+         <form class="sign-up-form form" action="/transaction/add-transaction" method="post">
+          <div class="closa-div-1">
+            <h2 class="closa-1"> &times; </h2>
+          </div>
+          <br>
+         <h1> Add New Transaction </h1>
+        <label class="form-label-wrapper">
+        <p class="form-label"> Title * </p>
+        <input class="form-input" type="text" placeholder="Enter Transaction Title" name="title" required>
+      </label>
+
+   {{!-- Select --}}
+       <label class="form-label-wrapper">
+        <p class="form-label"> Brand * </p>
+        <select class="form-input" name="brand" required>
+  <option value="codar">codar</option>
+  <option value="pianoman">pianoman</option>
+  <option value="agency">agency</option>
+  <option value="others">others</option>
+        </select>  
+      </label>
+      {{!-- Select --}}
+
+
+
+   {{!-- Select 2 --}}
+       <label class="form-label-wrapper">
+        <p class="form-label"> Type * </p>
+        <select class="form-input" name="type" required>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>  
+      </label>
+      {{!-- Select 2 --}}
+
+      <label class="form-label-wrapper">
+        <p class="form-label"> Amount (&#x20A6;) * </p>
+        <input class="form-input" type="number" name="amount" placeholder="Enter Transaction amount" required>
+      </label>
+      <label class="form-label-wrapper">
+        <p class="form-label"> Notes </p>
+        <textarea class="form-input" name="notes">
+        </textarea>
+      </label>
+      
+      <button class="form-btn primary-default-btn transparent-btn"
+      type="submit">
+           Add Transaction
+       </button>
+         </form>
+        </div>
+      {{!-- Blur Container --}}
+
+
+     {{!-- Blur Container 2 (Add Staff)--}}
+        <div class="blur-container-2">
+         <form class="sign-up-form form" action="/add-staff" method="post">
+         <div class="closa-div-2">
+            <h2 class="closa-2"> &times; </h2>
+          </div>
+          <br>
+         <h1> Add New Staff </h1>
+        <label class="form-label-wrapper">
+        <p class="form-label"> Name * </p>
+        <input class="form-input" type="text" placeholder="Enter Staff Name" name="name" required>
+        </label>
+
+        <label class="form-label-wrapper">
+        <p class="form-label"> Role * </p>
+        <input class="form-input" type="text" placeholder="Enter Staff Role" name="role" required>
+        </label>
+
+      <label class="form-label-wrapper">
+        <p class="form-label"> Salary (&#x20A6;) * </p>
+        <input class="form-input" type="number" placeholder="Enter Staff Salary" name="salary" required>
+      </label>
+      
+      <button class="form-btn primary-default-btn transparent-btn"
+      type="submit"
+      > Add Staff </button>
+         </form>
+        </div>
+      {{!-- Blur Container --}}
+
+  {{!-- Blur Container  3  (Add Brand)--}}
+        <div class="blur-container-3">
+      <form class="sign-up-form form" action="/add-brand" method="post">
+        <div class="closa-div-3">
+        <h2 class="closa-3"> &times; </h2>
+          </div>
+          <br>  
+         <h1> Add New Brand </h1>
+        <label class="form-label-wrapper">
+        <p class="form-label"> Brand Name * </p>
+        <input class="form-input" type="text" placeholder="Enter Transaction Title" name="brand_name" required>
+      </label>
+
+      <label class="form-label-wrapper">
+        <p class="form-label"> Description </p>
+        <textarea class="form-input" name="description">
+        </textarea>
+      </label>
+      
+      <button class="form-btn primary-default-btn transparent-btn"
+      type="submit"
+      > Add Brand </button>
+         </form>
+        </div>
+      {{!-- Blur Container --}}
+
+      {{!-- Blur Container 4 (Add User)--}}
+        <div class="blur-container-4">
+         <form class="sign-up-form form" action="/add-user" method="post">
+          <div class="closa-div-4">
+            <h2 class="closa-4"> &times; </h2>
+          </div>
+          <br>
+         <h1> Add New User </h1>
+        <label class="form-label-wrapper">
+        <p class="form-label"> Name * </p>
+        <input class="form-input" type="text" placeholder="Enter Transaction Title" name="name" required>
+      </label>
+
+        <label class="form-label-wrapper">
+        <p class="form-label"> Email * </p>
+        <input class="form-input" type="email" placeholder="Enter User Email" name="email" required>
+      </label>
+
+   {{!-- Select --}}
+       <label class="form-label-wrapper">
+        <p class="form-label"> Role * </p>
+        <select class="form-input" name="role" required>
+          <option value="admin"> Admin </option>
+          <option value="accountant"> Accountant </option>
+        </select>  
+      </label>
+      {{!-- Select --}}
+      
+  <button class="form-btn primary-default-btn transparent-btn"
+  type="submit"> 
+            Add New User
+   </button>
+         </form>
+        </div>
+      {{!-- Blur Container --}}
+
+       {{{body}}}
+
+      </div id="container">
+      </main>
+    <!-- ! Footer -->
+   {{> footer}}
+  </div>
+</div>
+
+{{> scripts}}
+
+</body>
+</html>

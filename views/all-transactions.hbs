@@ -1,0 +1,54 @@
+       <h2 class="main-title"> Transactions </h2>
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="users-table table-wrapper">
+              <table class="posts-table">
+                <thead>
+                  <tr class="users-table-info">
+                    <th>
+                      <label class="users-table__checkbox ms-20">
+                        <input type="checkbox" class="check-all"> Title
+                      </label>
+                    </th>
+                    <th> Brand </th>
+                    <th> Type </th>
+                    <th> Amount &#8358;</th>
+                    <th> Notes </th>
+                    <th> Date </th>
+                    <th> Action </th>
+                  </tr>
+                </thead>
+                <tbody>
+                {{#each allTransactions}}
+                  <tr>
+                    <td>
+                      <label class="users-table__checkbox">
+                        <input type="checkbox" class="check">
+                        {{title}} 
+                      </label>
+                    </td>  
+                    {{!-- <td>
+                      <form action="/assets/update/{{_id}}" method="post">
+                      <input 
+                      name="value"
+                      style="text-align:center;" type="text" value="{{value}}" onchange="this.form.submit()">
+                      </form>
+                    </td> --}}
+                    <td> {{brand}}</td>
+                    <td> {{type}} </td>
+                    <td>{{amount}} </td>
+                    <td>{{notes}}</td>
+                    <td>{{date}}</td>
+                    <td>
+                    <span class="badge-pending">     Delete
+                    </span>
+                      </td>
+                  </tr>
+                {{/each}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+         
+        </div>
